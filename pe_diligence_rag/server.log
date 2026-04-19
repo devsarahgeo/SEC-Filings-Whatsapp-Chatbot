@@ -1,0 +1,6 @@
+INFO:src.api.server:Starting server on 0.0.0.0:7000
+INFO:src.api.server:Webhook URL should be: https://natural-cover-cola.ngrok-free.dev/whatsapp
+INFO:     Started server process [8533]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7000 (Press CTRL+C to quit)
