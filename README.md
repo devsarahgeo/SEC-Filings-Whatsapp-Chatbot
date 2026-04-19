@@ -1,14 +1,41 @@
 <h2>Tech Stack:</h2>
 
-LLM:        Groq Llama 3.3 70B                                                                                                                 
-Embeddings: HuggingFace all-MiniLM-L6-v2                                                                                                         
-Vector DB:  FAISS                   
-Storage:    JSON files      
-RETRIEVER:  LangChain Retriever
-Server:     FastAPI + uvicorn                   
-WhatsApp:   Twilio                                                                                                                                  
-Tunnel:     ngrok  
+AI Tools:   Ollama(Claude Code alternate), Github Copilot
+Storage:    Can shift to another DB like SQLite or some other if large records
+  ┌──────────────┬──────────────────────────┬───────────────────────────────────────┐
+  │   Storage    │         Used For         │               Why JSON                │
+  ├──────────────┼──────────────────────────┼───────────────────────────────────────┤                                                                  
+  │ Raw HTML     │ Archive original filings │ raw data, never modify                │
+  ├──────────────┼──────────────────────────┼───────────────────────────────────────┤                                                                  
+  │ Chunks JSON  │ Structured SEC text      │ Easy to read, debug, portable         │
+  ├──────────────┼──────────────────────────┼───────────────────────────────────────┤                                                                  
+  │ FAISS index  │ Vector search            │ Binary format, fast similarity search │
+  ├──────────────┼──────────────────────────┼───────────────────────────────────────┤                                                                  
+ 
 
+
+  ┌─────────────┬───────────────────┬────────────────────────────────────────────────────────────┐
+  │    Tool     │      Purpose      │                            Why                             │
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ WhatsApp    │ User interface    │ Everyone has it, no app install needed                     │
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ Twilio      │ WhatsApp API      │ Connects WhatsApp to server                           
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ ngrok       │ Tunnel            │ Exposes local server to internet 
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ FastAPI     │ Web server        │ Receives webhook calls from Twilio                         │
+  │ Uvicorn     │ Runs FastAPI 
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ LangChain   │ LLM orchestration │ Chains prompts + retrieval + LLM together                  │
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ Groq        │ LLM               │ Llama 3.3 70B - fast, free, no OpenAI cost                 │
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ FAISS       │ Vector search DB  │ Finds relevant SEC filing chunks fast                      │
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ HuggingFace │ Embeddings        │ all-MiniLM-L6-v2 - Converts text to vectors                │
+  ├─────────────┼───────────────────┼────────────────────────────────────────────────────────────┤
+  │ SEC EDGAR   │ Data source       │ Free SEC filings - no API key needed                       │
+  └─────────────┴───────────────────┴────────────────────────────────────────────────────────────┘ 
 
 <h2>ARCHITECTURE</h2>
                                                                                    
