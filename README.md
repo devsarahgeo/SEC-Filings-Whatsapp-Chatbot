@@ -2,7 +2,7 @@
 
 AI Tools:   Ollama(Claude Code alternate), Github Copilot
 
-Storage:    Another DB like SQLite can be used if large records
+Storage:    In the future, another SQL DB for can be used for scalability
 
 
 | Storage       | Used For                  | Why JSON / Format                     |
