@@ -1,7 +1,9 @@
 <h2>Tech Stack:</h2>
 
 AI Tools:   Ollama(Claude Code alternate), Github Copilot
+
 Storage:    Can shift to another DB like SQLite or some other if large records
+
 
 | Storage       | Used For                  | Why JSON / Format                     |
 |---------------|---------------------------|--------------------------------------|
