@@ -28,64 +28,7 @@ Storage:    Can shift to another DB like SQLite or some other if large records
 
 <h2>ARCHITECTURE</h2>
 
-<img width="1509" height="2145" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/82ed241b-8a7d-472f-aa54-1cb931d6c481" />
-
-                                                                                   
-                                                                                                                                                                          
-                                ┌─────────┐                                                                                                                               
-                                │ WHATSAPP│
-                                │  USER   │
-                                └────┬────┘
-                                     │ send message                                                                                                                       
-                                ┌────▼────┐
-                                │ TWILIO  │                                                                                                                               
-                                │ WEBHOOK │
-                                └────┬────┘
-                                     │ HTTPS
-                                ┌────▼────┐                                                                                                                               
-                                │ NGROK   │
-                                │ :5000   │                                                                                                                               
-                                └────┬────┘
-                                     │ proxy
-                                ┌────▼────┐
-                                │ UVICORN │                                                                                                                               
-                                │ :5000   │
-                                └────┬────┘                                                                                                                               
-                                     │
-                           ┌─────────┼─────────┐
-                           │                   │
-                     ┌─────▼─────┐       ┌─────▼─────┐                                                                                                                    
-                     │   MENU    │       │   QUERY   │
-                     │  HANDLER  │       │  HANDLER  │                                                                                                                    
-                     │  (1-5)    │       │     │                                                                                                                    
-                     └─────┬─────┘       └─────┬─────┘
-                           │                   │                                                                                                                          
-                           └─────────┬─────────┘
-                                     │                                                                                                                                    
-                            ┌────────▼────────┐
-                            │    LANGCHAIN 
-                               ORCHESTRATOR                                                                                                                                  
-                            │  (ticker/year   │
-                            │   extraction)   │                                                                                                                           
-                            └────────┬────────┘
-                                     │                                                                                                                                    
-                ┌─────────────────────┼─────────────────────┐
-                │                     │                     │                                                                                                             
-         ┌──────▼──────┐       ┌──────▼──────┐       ┌──────▼──────┐
-         │   GROQ      │       │   GROQ      │       │   GROQ       │                                                                                                     
-         │   Llama     │       │   Llama     │       │   Llama      │
-         │   3.3 70B   │       │   3.3 70B   │       │   3.3 70B    │                                                                                                     
-         │             │       │             │       │              │                                                                                                     
-         │ (risk_chain)│       │(financials) │       │(valuation)   │                                                                                                     
-         └──────┬──────┘       └──────┬──────┘       └──────┬──────┘                                                                                                      
-                │                     │                     │
-                │            ┌─────────┴─────────┐          │                                                                                                             
-                │            │                   │          │                                                                                                             
-         ┌──────▼──────┐ ┌───▼────┐       ┌──────▼──────┐   │
-         │   FAISS     │ │  JSON  │       │   FAISS     │   │                                                                                                             
-         │   (risk)    │ │(metric)│       │   (mda)     │   │
-         └─────────────┘ │        │       └─────────────┘   │                                                                                                             
-                         └────────┘                                   
+<img width="776" height="2180" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/eca0a3c8-f516-4d16-873f-584cb90b6b4b" />
 
                 
                                                            
