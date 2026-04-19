@@ -30,7 +30,7 @@ Storage:    In the future, another SQL DB for can be used for scalability
 | Groq         | LLM              | Llama 3 (fast, low latency, cost-effective)                         |
 | FAISS        | Vector DB        | Fast similarity search for SEC chunks                               |
 | HuggingFace  | Embeddings       | Converts text to vectors (e.g., all-MiniLM-L6-v2)                   |
-| SEC EDGAR    | Data source      | Free SEC filings, no API key required                               |
+| SEC EDGAR    | Data source      | Free SEC filings                              |
 
 
 <h2>ARCHITECTURE</h2>
