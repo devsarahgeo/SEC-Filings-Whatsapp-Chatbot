@@ -1,3 +1,7 @@
+What is this:
+A RAG-powered analyst trapped inside WhatsApp, extracting risks, EBITDA drivers, and value creation ideas from SEC filings.
+
+
 <h2>Tech Stack:</h2>
 
 AI Tools:   Ollama(Claude Code alternate), Github Copilot
