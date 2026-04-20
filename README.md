@@ -38,8 +38,13 @@ Storage:    In the future, another SQL DB for can be used for scalability
 <img width="776" height="2180" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/eca0a3c8-f516-4d16-873f-584cb90b6b4b" />
 
 <h2>DEMO</h2>:
+[![Watch Demo](./[demo](https://github.com/user-attachments/assets/6fdac9c4-cc89-42dc-8d29-3a96aae07f08).gif)](./https://github.com/devsarahgeo/Chatbot-to-chat-with-Documents/blob/main/demo_chatbot.mp4)
 
-<img width="776" height="2180" alt="video" src="https://github.com/devsarahgeo/Chatbot-to-chat-with-Documents/blob/main/demo_chatbot.mp4" />
+
+
+
+<img width="800" height="620" alt="demo_chatbot-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/6fdac9c4-cc89-42dc-8d29-3a96aae07f08" />
+
 
 
 
