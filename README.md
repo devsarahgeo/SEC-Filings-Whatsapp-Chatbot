@@ -39,7 +39,7 @@ Storage:    In the future, another SQL DB for can be used for scalability
 
 <h2>DEMO:</h2>
 
-Full Video: <img width="800" height="620" alt="demo_chatbot-ezgif com-video-to-gif-converter" src="https://github.com/devsarahgeo/Chatbot-to-chat-with-Documents/blob/main/demo_chatbot.mp4" />
+Full Video: https://github.com/devsarahgeo/SEC-Filings-Whatsapp-Chatbot/blob/main/demo_chatbot.mp4
 
 
 <img width="800" height="620" alt="demo_chatbot-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/6fdac9c4-cc89-42dc-8d29-3a96aae07f08" />
