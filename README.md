@@ -1,6 +1,6 @@
 <h2>What is this:</h2>
 
-MVP: A RAG-powered analyst trapped inside WhatsApp, extracting risks, EBITDA drivers, and value creation ideas from SEC filings.
+A RAG-powered analyst trapped inside WhatsApp, extracting risks, EBITDA drivers, and value creation ideas from SEC filings.
 
 
 <h2>Tech Stack:</h2>
